@@ -17,7 +17,7 @@ public class CJConstants {
 	// Xpaths
 	public static final String REPORTS = "(//span[@class='navbar-menu--title'])[4]";
 	public static final String PERFORMANCE = "(//li[@class='menu-item'])[20]";
-	public static final String REPORT_DOWNLOAD = "(//button[@id='transactionBookmarkButton'])";
+	public static final String REPORT_DOWNLOAD = "(//button[@id='transactionDownloadButton'])";
 	public static final String REPORT_CONFIRM_DOWNLOAD = "(//div/button[text()='Download'])";
 	
 	//HTML elements
