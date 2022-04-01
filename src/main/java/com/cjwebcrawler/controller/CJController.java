@@ -38,9 +38,15 @@ public class CJController {
 			// Traverse Home Page
 			driver = cjFunction.traverseHomePage(driver);
 			Thread.sleep(60000);
+			
+			// Select website option
+			driver = cjFunction.selectWebsiteOption(driver);
+			Thread.sleep(2000);
 
 			// Traverse Reports
 			driver = cjFunction.traverseReports(driver);
+			
+			System.out.println("Report downloaded successfully");
 
 		} catch (Exception e) {
 			driver.close();

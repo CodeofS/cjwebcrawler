@@ -3,6 +3,7 @@ package com.cjwebcrawler.function;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.cjwebcrawler.utils.CJConstants;
 
@@ -32,6 +33,14 @@ public class CJFunction implements CJFunctions{
 		return driver;
 	}
 	
+    public WebDriver selectWebsiteOption(WebDriver driver) {
+    	WebElement selectPerfBy = driver.findElement(By.xpath(CJConstants.SELECT_PERFORMANCE_BY));
+    	selectPerfBy.click();
+    	WebElement selectOption = driver.findElement(By.xpath(CJConstants.SELECT_WEBSITE_OPTION));
+    	selectOption.click();
+		return driver;
+	}
+    
 	public WebDriver traverseReports(WebDriver driver) throws Exception{
 		WebElement download = driver.findElement(By.xpath(CJConstants.REPORT_DOWNLOAD));
 	    download.click();
