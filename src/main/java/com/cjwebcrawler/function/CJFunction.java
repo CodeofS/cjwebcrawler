@@ -38,6 +38,7 @@ public class CJFunction implements CJFunctions{
     	selectPerfBy.click();
     	WebElement selectOption = driver.findElement(By.xpath(CJConstants.SELECT_WEBSITE_OPTION));
     	selectOption.click();
+    	System.out.println("Selected performance by website");
 		return driver;
 	}
     

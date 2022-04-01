@@ -8,5 +8,7 @@ public interface CJFunctions {
 	
 	public WebDriver traverseHomePage(WebDriver driver) throws Exception;
 	
+	public WebDriver selectWebsiteOption(WebDriver driver) throws Exception;
+	
 	public WebDriver traverseReports(WebDriver driver) throws Exception;
 }
