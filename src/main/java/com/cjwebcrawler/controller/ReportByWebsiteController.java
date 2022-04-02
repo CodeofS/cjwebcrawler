@@ -6,16 +6,16 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.openqa.selenium.WebDriver;
 
-import com.cjwebcrawler.function.CJFunction;
+import com.cjwebcrawler.function.ReportsByWebsite;
 import com.cjwebcrawler.utils.CJConstants;
 import com.cjwebcrawler.utils.CJUtils;
 
-public class CJController {
+public class ReportByWebsiteController {
 
 	public void automateCJ() {
 
 		WebDriver driver = CJUtils.getWebDriver();
-		CJFunction cjFunction = new CJFunction();
+		ReportsByWebsite cjFunction = new ReportsByWebsite();
 		
 		try {
 			System.out.println("Connecting to cj.com : " + CJConstants.WEBSITE_URL);			
@@ -37,16 +37,18 @@ public class CJController {
 
 			// Traverse Home Page
 			driver = cjFunction.traverseHomePage(driver);
-			Thread.sleep(60000);
+			Thread.sleep(30000);
 			
 			// Select website option
 			driver = cjFunction.selectWebsiteOption(driver);
 			Thread.sleep(2000);
+			
+			//Select RunReport
+			driver = cjFunction.runReport(driver);
+			Thread.sleep(2000);
 
 			// Traverse Reports
 			driver = cjFunction.traverseReports(driver);
-			
-			System.out.println("Report downloaded successfully");
 
 		} catch (Exception e) {
 			driver.close();
